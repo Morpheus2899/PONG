@@ -200,9 +200,9 @@ def main():
             #ball_x_speed = random.randint(-6, 6)
             if ball.x < player.x + 25:
                 ball_x_speed = -6
-            if ball.x < player.x + 50:
+            elif ball.x < player.x + 50:
                 ball_x_speed = -3
-            if ball.x < player.x + 75:
+            elif ball.x < player.x + 75:
                 ball_x_speed = 3
             else:
                 ball_x_speed = 6
