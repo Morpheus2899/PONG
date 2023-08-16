@@ -197,7 +197,15 @@ def main():
         if ball.colliderect(player):
             ball.top -= 10
             ball_y_speed = -ball_y_speed
-            ball_x_speed = random.randint(-6, 6)
+            #ball_x_speed = random.randint(-6, 6)
+            if ball.x < player.x + 25:
+                ball_x_speed = -6
+            if ball.x < player.x + 50:
+                ball_x_speed = -3
+            if ball.x < player.x + 75:
+                ball_x_speed = 3
+            else:
+                ball_x_speed = 6
         if ball.colliderect(top_wall):
             ball_y_speed = -ball_y_speed
         if ball.colliderect(left_wall) or ball.colliderect(right_wall):
